@@ -5,24 +5,8 @@
   "description": "",
   "metaData": [
     {
-      "name": "apiKey",
-      "type": "STRING"
-    },
-    {
-      "name": "eventType",
-      "type": "STRING"
-    },
-    {
-      "name": "orgName",
-      "type": "STRING"
-    },
-    {
-      "name": "orgId",
-      "type": "STRING"
-    },
-    {
-      "name": "orgHandle",
-      "type": "STRING"
+      "name": "orgTenantId",
+      "type": "INT"
     }
   ],
   "payloadData": [

@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "nickName": "",
   "description": "",
-  "metaData": [],
+  "metaData": [
+    {
+      "name": "tenantId", "type": "INT"
+    }
+  ],
   "payloadData": [
     {
       "name": "apiKey",

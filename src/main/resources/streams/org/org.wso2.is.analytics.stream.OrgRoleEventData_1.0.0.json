@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "nickName": "",
   "description": "Stream for organization role events",
-  "metaData": [],
+  "metaData": [
+    {
+      "name": "orgTenantId", "type": "INT"
+    }
+  ],
   "payloadData": [
     {
       "name": "apiKey",
