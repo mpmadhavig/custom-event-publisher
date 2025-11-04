@@ -1,0 +1,45 @@
+{
+  "name": "org.wso2.is.analytics.stream.UserEventData",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "metaData": [],
+  "payloadData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+        "name": "userId",
+        "type": "STRING"
+    },
+    {
+      "name": "username",
+      "type": "STRING"
+    },
+    {
+      "name": "userStoreDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "tenantDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "claimsAdded",
+      "type": "STRING"
+    },
+    {
+      "name": "claimsRemoved",
+      "type": "STRING"
+    },
+    {
+      "name": "claimsUpdated",
+      "type": "STRING"
+    }
+  ]
+}

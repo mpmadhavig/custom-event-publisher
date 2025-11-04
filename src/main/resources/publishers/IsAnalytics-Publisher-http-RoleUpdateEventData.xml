@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventPublisher
+  name="Http-IsAnalytics-Publisher-RoleUpdateEventData"
+  statistics="disable" trace="disable" xmlns="http://wso2.org/carbon/eventpublisher">
+  <from streamName="org.wso2.is.analytics.stream.RoleUpdateEventData" version="1.0.0"/>
+  <mapping customMapping="disable" type="json" />
+  <to eventAdapterType="http">
+    <property name="http.client.method">HttpPost</property>
+    <property name="publishingMode">non-blocking</property>
+    <property name="http.url">https://webhook.site/e60a769d-d5a0-4dbd-b7bb-73c2b5aaa29f</property>
+  </to>
+</eventPublisher>

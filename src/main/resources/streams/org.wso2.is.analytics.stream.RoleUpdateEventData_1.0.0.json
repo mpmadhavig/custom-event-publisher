@@ -1,0 +1,61 @@
+{
+  "name": "org.wso2.is.analytics.stream.RoleUpdateEventData",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "metaData": [],
+  "payloadData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+      "name": "roleName",
+      "type": "STRING"
+    },
+    {
+      "name": "roleId",
+      "type": "STRING"
+    },
+    {
+        "name": "addedPermissions",
+        "type": "STRING"
+    },
+    {
+        "name": "deletedPermissions",
+        "type": "STRING"
+    },
+    {
+        "name": "newGroupIdList",
+        "type": "STRING"
+    },
+    {
+        "name": "deleteGroupIdList",
+        "type": "STRING"
+    },
+    {
+        "name": "newUserIdList",
+        "type": "STRING"
+    },
+    {
+        "name": "deleteUserIdList",
+        "type": "STRING"
+    },
+    {
+      "name": "audienceId",
+      "type": "STRING"
+    },
+    {
+      "name": "tenantDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "userStoreDomain",
+      "type": "STRING"
+    }
+  ]
+}

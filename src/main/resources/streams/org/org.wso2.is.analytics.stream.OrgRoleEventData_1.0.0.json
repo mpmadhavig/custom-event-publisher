@@ -1,0 +1,50 @@
+{
+  "name": "org.wso2.is.analytics.stream.OrgRoleEventData",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "Stream for organization role events",
+  "metaData": [],
+  "payloadData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+      "name": "roleName",
+      "type": "STRING"
+    },
+    {
+      "name": "roleId",
+      "type": "STRING"
+    },
+    {
+      "name": "audienceId",
+      "type": "STRING"
+    },
+    {
+      "name": "OrgHandle",
+      "type": "STRING"
+    },
+    {
+      "name": "userStoreDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "permissions",
+      "type": "STRING"
+    },
+    {
+      "name": "userList",
+      "type": "STRING"
+    },
+    {
+      "name": "groupList",
+      "type": "STRING"
+    }
+  ]
+}
+

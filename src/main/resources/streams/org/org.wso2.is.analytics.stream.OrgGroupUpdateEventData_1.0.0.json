@@ -1,0 +1,45 @@
+{
+  "name": "org.wso2.is.analytics.stream.OrgGroupUpdateEventData",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "metaData": [],
+  "payloadData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+      "name": "OrgHandle",
+      "type": "STRING"
+    },
+    {
+      "name": "userStoreDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "groupID",
+      "type": "STRING"
+    },
+    {
+      "name": "groupName",
+      "type": "STRING"
+    },
+    {
+      "name": "updatedGroupName",
+      "type": "STRING"
+    },
+    {
+      "name": "addedUsers",
+      "type": "STRING"
+    },
+    {
+      "name": "removedUsers",
+      "type": "STRING"
+    }
+  ]
+}

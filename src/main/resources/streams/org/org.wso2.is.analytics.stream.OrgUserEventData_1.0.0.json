@@ -1,14 +1,9 @@
 {
-  "name": "org.wso2.is.analytics.stream.CustomAuthData",
+  "name": "org.wso2.is.analytics.stream.OrgUserEventData",
   "version": "1.0.0",
   "nickName": "",
-  "description": "",
-  "metaData": [
-    {
-      "name": "tenantId",
-      "type": "INT"
-    }
-  ],
+  "description": "Stream for organization user events",
+  "metaData": [],
   "payloadData": [
     {
       "name": "apiKey",
@@ -19,7 +14,7 @@
       "type": "STRING"
     },
     {
-      "name": "authenticationSuccess",
+      "name": "userId",
       "type": "STRING"
     },
     {
@@ -31,16 +26,21 @@
       "type": "STRING"
     },
     {
-      "name": "tenantDomain",
+      "name": "OrgHandle",
       "type": "STRING"
     },
     {
-      "name": "serviceProvider",
+      "name": "claimsAdded",
       "type": "STRING"
     },
     {
-      "name": "identityProvider",
+      "name": "claimsRemoved",
+      "type": "STRING"
+    },
+    {
+      "name": "claimsUpdated",
       "type": "STRING"
     }
   ]
 }
+

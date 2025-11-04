@@ -1,0 +1,49 @@
+{
+  "name": "org.wso2.is.analytics.stream.RoleEventData",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "metaData": [],
+  "payloadData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+      "name": "roleName",
+      "type": "STRING"
+    },
+    {
+      "name": "roleId",
+      "type": "STRING"
+    },
+    {
+      "name": "audienceId",
+      "type": "STRING"
+    },
+    {
+      "name": "tenantDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "userStoreDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "permissions",
+      "type": "STRING"
+    },
+    {
+      "name": "userList",
+      "type": "STRING"
+    },
+    {
+      "name": "groupList",
+      "type": "STRING"
+    }
+  ]
+}

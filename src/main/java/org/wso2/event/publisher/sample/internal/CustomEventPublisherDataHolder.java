@@ -19,23 +19,17 @@
 package org.wso2.event.publisher.sample.internal;
 
 import org.wso2.carbon.event.stream.core.EventStreamService;
-import org.wso2.carbon.identity.application.authentication.framework.AuthenticationDataPublisher;
-import org.wso2.carbon.registry.core.service.RegistryService;
-import org.wso2.carbon.user.core.service.RealmService;
 
-import java.util.ArrayList;
-import java.util.List;
+public class CustomEventPublisherDataHolder {
 
-public class SampleEventPublisherDataHolder {
-
-    private static SampleEventPublisherDataHolder serviceHolder = new SampleEventPublisherDataHolder();
+    private static final CustomEventPublisherDataHolder serviceHolder = new CustomEventPublisherDataHolder();
     private EventStreamService publisherService;
 
-    private SampleEventPublisherDataHolder() {
+    private CustomEventPublisherDataHolder() {
 
     }
 
-    public static SampleEventPublisherDataHolder getInstance() {
+    public static CustomEventPublisherDataHolder getInstance() {
 
         return serviceHolder;
     }

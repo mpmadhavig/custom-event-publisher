@@ -1,0 +1,37 @@
+{
+  "name": "org.wso2.is.analytics.stream.GroupEventData",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "metaData": [],
+  "payloadData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+      "name": "groupName",
+      "type": "STRING"
+    },
+    {
+      "name": "groupID",
+      "type": "STRING"
+    },
+    {
+      "name": "tenantDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "userStoreDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "userList",
+      "type": "STRING"
+    }
+  ]
+}

@@ -28,7 +28,9 @@ import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
 import org.wso2.carbon.event.stream.core.EventStreamService;
 import org.wso2.carbon.identity.event.handler.AbstractEventHandler;
-import org.wso2.event.publisher.sample.SampleEventPublisher;
+import org.wso2.event.publisher.sample.publishers.GroupEventPublisher;
+import org.wso2.event.publisher.sample.publishers.RoleEventPublisher;
+import org.wso2.event.publisher.sample.publishers.UserEventPublisher;
 
 /**
  * Registers the publisher as an osgi component.
@@ -37,9 +39,9 @@ import org.wso2.event.publisher.sample.SampleEventPublisher;
         name = "sample.event.publisher",
         immediate = true
 )
-public class SampleEventPublisherServiceComponent {
+public class CustomEventPublisherServiceComponent {
 
-    private static Log log = LogFactory.getLog(SampleEventPublisherServiceComponent.class);
+    private static Log log = LogFactory.getLog(CustomEventPublisherServiceComponent.class);
 
     @Activate
     protected void activate(ComponentContext context) {
@@ -48,7 +50,11 @@ public class SampleEventPublisherServiceComponent {
         }
         try {
             context.getBundleContext().registerService(AbstractEventHandler.class.getName(),
-                    new SampleEventPublisher(), null);
+                    new UserEventPublisher(), null);
+            context.getBundleContext().registerService(AbstractEventHandler.class.getName(),
+                    new RoleEventPublisher(), null);
+            context.getBundleContext().registerService(AbstractEventHandler.class.getName(),
+                    new GroupEventPublisher(), null);
             if (log.isDebugEnabled()) {
                 log.debug("SampleEventPublisherServiceComponent is activated");
             }
@@ -66,11 +72,11 @@ public class SampleEventPublisherServiceComponent {
     )
     protected void setEventStreamService(EventStreamService publisherService) {
 
-        SampleEventPublisherDataHolder.getInstance().setPublisherService(publisherService);
+        CustomEventPublisherDataHolder.getInstance().setPublisherService(publisherService);
     }
 
     protected void unsetEventStreamService(EventStreamService publisherService) {
 
-        SampleEventPublisherDataHolder.getInstance().setPublisherService(null);
+        CustomEventPublisherDataHolder.getInstance().setPublisherService(null);
     }
 }

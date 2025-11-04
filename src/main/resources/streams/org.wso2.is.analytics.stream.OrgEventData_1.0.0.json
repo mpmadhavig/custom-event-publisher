@@ -1,0 +1,50 @@
+{
+  "name": "org.wso2.is.analytics.stream.OrgEventData",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "metaData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+      "name": "orgName",
+      "type": "STRING"
+    },
+    {
+      "name": "orgId",
+      "type": "STRING"
+    },
+    {
+      "name": "orgHandle",
+      "type": "STRING"
+    }
+  ],
+  "payloadData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+      "name": "orgName",
+      "type": "STRING"
+    },
+    {
+      "name": "orgId",
+      "type": "STRING"
+    },
+    {
+      "name": "orgHandle",
+      "type": "STRING"
+    }
+  ]
+}

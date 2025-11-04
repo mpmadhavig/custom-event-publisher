@@ -84,6 +84,11 @@
             <artifactId>org.wso2.carbon.identity.application.mgt</artifactId>
             <version>${identity.framework.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.organization.management</groupId>
+            <artifactId>org.wso2.carbon.identity.organization.management.ext</artifactId>
+            <version>${org.mgt.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.wso2.eclipse.osgi</groupId>
@@ -103,6 +108,11 @@
         <dependency>
             <groupId>org.wso2.carbon.identity.framework</groupId>
             <artifactId>org.wso2.carbon.identity.event</artifactId>
+            <version>${identity.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.framework</groupId>
+            <artifactId>org.wso2.carbon.identity.role.v2.mgt.core</artifactId>
             <version>${identity.framework.version}</version>
         </dependency>
     </dependencies>
@@ -157,8 +167,12 @@
         </plugins>
     </build>
     <properties>
-        <identity.framework.version>5.12.387</identity.framework.version>
+        <identity.framework.version>7.8.417</identity.framework.version>
+        <carbon.identity.framework.version>7.8.417</carbon.identity.framework.version>
+        <carbon.identity.framework.imp.pkg.version.range>[5.20.90, 8.0.0)
+        </carbon.identity.framework.imp.pkg.version.range>
         <carbon.kernel.version>4.4.40</carbon.kernel.version>
+        <org.mgt.version>2.1.1</org.mgt.version>
         <identity.datapublisher.authentication.version>5.1.12</identity.datapublisher.authentication.version>
         <maven.scr.plugin.version>1.24.0</maven.scr.plugin.version>
         <maven.bundle.plugin.version>2.4.0</maven.bundle.plugin.version>
