@@ -100,7 +100,7 @@ public class GroupEventPublisher extends BaseEventPublisher {
 
     private static Object[] createGroupEventPayload(GroupEventData groupEventData) {
 
-        Object[] payloadData = new Object[7];
+        Object[] payloadData = new Object[8];
 
         payloadData[0] = "group_event_sample_key";
         payloadData[1] = groupEventData.getEventType();
@@ -109,13 +109,14 @@ public class GroupEventPublisher extends BaseEventPublisher {
         payloadData[4] = groupEventData.getTenantDomain();
         payloadData[5] = groupEventData.getUserStoreDomain();
         payloadData[6] = listToPayload(groupEventData.getUserList());
+        payloadData[7] = System.currentTimeMillis();
 
         return payloadData;
     }
 
     private static Object[] createUpdateGroupEventPayload(GroupUpdateEventData groupUpdateEventData) {
 
-        Object[] payloadData = new Object[9];
+        Object[] payloadData = new Object[10];
 
         payloadData[0] = "group_update_event_sample_key";
         payloadData[1] = groupUpdateEventData.getEventType();
@@ -126,6 +127,7 @@ public class GroupEventPublisher extends BaseEventPublisher {
         payloadData[6] = groupUpdateEventData.getUpdatedGroupName();
         payloadData[7] = listToPayload(groupUpdateEventData.getAddedUsers());
         payloadData[8] = listToPayload(groupUpdateEventData.getRemovedUsers());
+        payloadData[9] = System.currentTimeMillis();
 
         return payloadData;
     }

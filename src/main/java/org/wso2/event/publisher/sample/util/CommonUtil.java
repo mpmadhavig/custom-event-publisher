@@ -18,6 +18,7 @@
 
 package org.wso2.event.publisher.sample.util;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.wso2.carbon.identity.core.util.IdentityTenantUtil;
@@ -71,6 +72,7 @@ public class CommonUtil {
      * @return ArrayList of strings
      */
     public static List<String> convertToArrayList(String[] array) {
+
         if (array == null) {
             return new ArrayList<>();
         }
@@ -84,6 +86,7 @@ public class CommonUtil {
      * @return String representation of list or null
      */
     public static Object listToPayload(List<String> list) {
+
         if (list != null && !list.isEmpty()) {
             return list.toString();
         }
@@ -97,6 +100,7 @@ public class CommonUtil {
      * @return true if organization tenant, false otherwise
      */
     public static boolean isOrganizationTenant(String tenantDomain) {
+
         return !CARBON_SUPER_TENANT.equals(tenantDomain);
     }
 
@@ -109,6 +113,7 @@ public class CommonUtil {
      * @return Appropriate stream name
      */
     public static String selectStreamName(String tenantDomain, String defaultStream, String orgStream) {
+
         return isOrganizationTenant(tenantDomain) ? orgStream : defaultStream;
     }
 
@@ -120,6 +125,7 @@ public class CommonUtil {
      * @return JSON string representation of the map, or null if map is empty
      */
     public static Object mapToKeyValuePairs(java.util.Map<String, String> map) {
+
         if (map == null || map.isEmpty()) {
             return null;
         }
@@ -145,14 +151,33 @@ public class CommonUtil {
      * @return Escaped string safe for JSON
      */
     private static String escapeJson(String value) {
+
         if (value == null) {
             return "";
         }
         return value.replace("\\", "\\\\")
-                    .replace("\"", "\\\"")
-                    .replace("\n", "\\n")
-                    .replace("\r", "\\r")
-                    .replace("\t", "\\t");
+                .replace("\"", "\\\"")
+                .replace("\n", "\\n")
+                .replace("\r", "\\r")
+                .replace("\t", "\\t");
+    }
+
+    /**
+     * Get Meta data array.
+     *
+     * @param tenantDomain Tenant domain.
+     * @return Meta data array.
+     */
+    public static Object[] getMetaDataArray(String tenantDomain) {
+
+        Object[] metaData = new Object[1];
+        if (StringUtils.isBlank(tenantDomain)) {
+            metaData[0] = CARBON_SUPER_TENANT;
+        } else {
+            metaData[0] = tenantDomain;
+        }
+
+        return metaData;
     }
 }
 

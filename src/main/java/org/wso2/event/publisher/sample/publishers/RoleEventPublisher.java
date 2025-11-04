@@ -99,7 +99,7 @@ public class RoleEventPublisher extends BaseEventPublisher {
     }
 
     private static Object[] createRoleEventPayload(RoleEventData roleEventData) {
-        Object[] payloadData = new Object[10];
+        Object[] payloadData = new Object[11];
 
         payloadData[0] = "role_event_sample_key";
         payloadData[1] = roleEventData.getEventType();
@@ -108,15 +108,17 @@ public class RoleEventPublisher extends BaseEventPublisher {
         payloadData[4] = roleEventData.getAudienceId();
         payloadData[5] = roleEventData.getTenantDomain();
         payloadData[6] = roleEventData.getUserStoreDomain();
-        payloadData[7] = listToPayload(roleEventData.getPermissions());
+        payloadData[7] = listToPayload(getPermissionList(roleEventData.getPermissions()));
         payloadData[8] = listToPayload(roleEventData.getUserList());
         payloadData[9] = listToPayload(roleEventData.getGroupList());
+        payloadData[10] = System.currentTimeMillis();
 
         return payloadData;
     }
 
     private static Object[] createRoleUpdateEventPayload(RoleUpdateEventData roleEventData) {
-        Object[] payloadData = new Object[13];
+
+        Object[] payloadData = new Object[14];
 
         payloadData[0] = "role_event_sample_key";
         payloadData[1] = roleEventData.getEventType();
@@ -131,6 +133,7 @@ public class RoleEventPublisher extends BaseEventPublisher {
         payloadData[10] = roleEventData.getAudienceId();
         payloadData[11] = roleEventData.getTenantDomain();
         payloadData[12] = roleEventData.getUserStoreDomain();
+        payloadData[13] = System.currentTimeMillis();
 
         return payloadData;
     }

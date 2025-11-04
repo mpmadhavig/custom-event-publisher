@@ -71,7 +71,7 @@ public class UserEventPublisher extends BaseEventPublisher {
 
 
     private static Object[] createUserEventPayload(UserEventData userEventData) {
-        Object[] payloadData = new Object[9];
+        Object[] payloadData = new Object[10];
 
         payloadData[0] = "user_event_sample_key";
         payloadData[1] = userEventData.getEventType();
@@ -82,6 +82,7 @@ public class UserEventPublisher extends BaseEventPublisher {
         payloadData[6] = mapToKeyValuePairs(userEventData.getClaimsAdded());
         payloadData[7] = mapToKeyValuePairs(userEventData.getClaimsRemoved());
         payloadData[8] = mapToKeyValuePairs(userEventData.getClaimsUpdated());
+        payloadData[9] = System.currentTimeMillis();
 
         return payloadData;
     }

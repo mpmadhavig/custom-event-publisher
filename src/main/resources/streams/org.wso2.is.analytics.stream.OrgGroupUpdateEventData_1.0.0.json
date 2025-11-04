@@ -1,13 +1,8 @@
 {
-  "name": "org.wso2.is.analytics.stream.OrgUserEventData",
+  "name": "org.wso2.is.analytics.stream.OrgGroupUpdateEventData",
   "version": "1.0.0",
   "nickName": "",
-  "description": "Stream for organization user events",
-  "metaData": [
-    {
-      "name": "orgTenantId", "type": "INT"
-    }
-  ],
+  "description": "",
   "payloadData": [
     {
       "name": "apiKey",
@@ -18,11 +13,7 @@
       "type": "STRING"
     },
     {
-      "name": "userId",
-      "type": "STRING"
-    },
-    {
-      "name": "username",
+      "name": "orgName",
       "type": "STRING"
     },
     {
@@ -30,21 +21,28 @@
       "type": "STRING"
     },
     {
-      "name": "OrgHandle",
+      "name": "groupID",
       "type": "STRING"
     },
     {
-      "name": "claimsAdded",
+      "name": "groupName",
       "type": "STRING"
     },
     {
-      "name": "claimsRemoved",
+      "name": "updatedGroupName",
       "type": "STRING"
     },
     {
-      "name": "claimsUpdated",
+      "name": "addedUsers",
       "type": "STRING"
+    },
+    {
+      "name": "removedUsers",
+      "type": "STRING"
+    },
+    {
+      "name": "timestamp",
+      "type": "LONG"
     }
   ]
 }
-

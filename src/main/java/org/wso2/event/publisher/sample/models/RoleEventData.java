@@ -18,6 +18,8 @@
 
 package org.wso2.event.publisher.sample.models;
 
+import org.wso2.carbon.identity.role.v2.mgt.core.model.Permission;
+
 import java.util.List;
 import java.util.Map;
 
@@ -27,14 +29,14 @@ public class RoleEventData {
     private String roleName;
     private String roleId;
     private String audienceId;
-    private List<String> permissions;
+    private List<Permission> permissions;
     private List<String> groupList;
     private List<String> userList;
     private String tenantDomain;
     private String userStoreDomain;
 
     public RoleEventData(String eventType, String roleName, String roleId, String audienceId,
-                         List<String> permissions, List<String> groupList, List<String> userList,
+                         List<Permission> permissions, List<String> groupList, List<String> userList,
                          String tenantDomain, String userStoreDomain) {
 
         this.eventType = eventType;
@@ -55,7 +57,7 @@ public class RoleEventData {
                 (String) eventProperties.get("role-name"),
                 (String) eventProperties.get("role-id"),
                 (String) eventProperties.get("audienceId"),
-                (List<String>) eventProperties.get("PERMISSIONS"),
+                (List<Permission>) eventProperties.get("PERMISSIONS"),
                 (List<String>) eventProperties.get("GROUP_LIST"),
                 (List<String>) eventProperties.get("USER_LIST"),
                 (String) eventProperties.get("tenant-domain"),
@@ -103,12 +105,12 @@ public class RoleEventData {
         this.roleId = roleId;
     }
 
-    public List<String> getPermissions() {
+    public List<Permission> getPermissions() {
 
         return permissions;
     }
 
-    public void setPermissions(List<String> permissions) {
+    public void setPermissions(List<Permission> permissions) {
 
         this.permissions = permissions;
     }

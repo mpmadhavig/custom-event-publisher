@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "nickName": "",
   "description": "",
-  "metaData": [
-    {
-      "name": "tenantId", "type": "INT"
-    }
-  ],
   "payloadData": [
     {
       "name": "apiKey",
@@ -48,6 +43,10 @@
     {
       "name": "groupList",
       "type": "STRING"
+    },
+    {
+      "name": "timestamp",
+      "type": "LONG"
     }
   ]
 }

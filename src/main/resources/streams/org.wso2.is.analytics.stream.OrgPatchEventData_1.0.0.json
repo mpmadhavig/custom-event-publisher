@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "nickName": "",
   "description": "Stream for organization patch events",
-  "metaData": [
-    {
-      "name": "orgTenantId", "type": "INT"
-    }
-  ],
   "payloadData": [
     {
       "name": "apiKey",
@@ -24,6 +19,10 @@
     {
       "name": "patchOperations",
       "type": "STRING"
+    },
+    {
+      "name": "timestamp",
+      "type": "LONG"
     }
   ]
 }

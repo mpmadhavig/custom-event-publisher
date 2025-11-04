@@ -1,13 +1,8 @@
 {
-  "name": "org.wso2.is.analytics.stream.OrgRoleEventData",
+  "name": "org.wso2.is.analytics.stream.OrgUserEventData",
   "version": "1.0.0",
   "nickName": "",
-  "description": "Stream for organization role events",
-  "metaData": [
-    {
-      "name": "orgTenantId", "type": "INT"
-    }
-  ],
+  "description": "Stream for organization user events",
   "payloadData": [
     {
       "name": "apiKey",
@@ -18,19 +13,11 @@
       "type": "STRING"
     },
     {
-      "name": "roleName",
+      "name": "userId",
       "type": "STRING"
     },
     {
-      "name": "roleId",
-      "type": "STRING"
-    },
-    {
-      "name": "audienceId",
-      "type": "STRING"
-    },
-    {
-      "name": "OrgHandle",
+      "name": "username",
       "type": "STRING"
     },
     {
@@ -38,16 +25,24 @@
       "type": "STRING"
     },
     {
-      "name": "permissions",
+      "name": "orgName",
       "type": "STRING"
     },
     {
-      "name": "userList",
+      "name": "claimsAdded",
       "type": "STRING"
     },
     {
-      "name": "groupList",
+      "name": "claimsRemoved",
       "type": "STRING"
+    },
+    {
+      "name": "claimsUpdated",
+      "type": "STRING"
+    },
+    {
+      "name": "timestamp",
+      "type": "LONG"
     }
   ]
 }

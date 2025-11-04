@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "nickName": "",
   "description": "Stream for organization role update events",
-  "metaData": [
-    {
-      "name": "orgTenantId", "type": "INT"
-    }
-  ],
   "payloadData": [
     {
       "name": "apiKey",
@@ -54,12 +49,16 @@
       "type": "STRING"
     },
     {
-      "name": "OrgHandle",
+      "name": "orgName",
       "type": "STRING"
     },
     {
       "name": "userStoreDomain",
       "type": "STRING"
+    },
+    {
+      "name": "timestamp",
+      "type": "LONG"
     }
   ]
 }

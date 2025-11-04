@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "nickName": "",
   "description": "",
-  "metaData": [
-    {
-      "name": "tenantId", "type": "INT"
-    }
-  ],
   "payloadData": [
     {
       "name": "apiKey",
@@ -60,6 +55,10 @@
     {
       "name": "userStoreDomain",
       "type": "STRING"
+    },
+    {
+      "name": "timestamp",
+      "type": "LONG"
     }
   ]
 }

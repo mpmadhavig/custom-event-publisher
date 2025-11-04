@@ -48,10 +48,8 @@ public class PublisherUtil {
 
         try {
             FrameworkUtils.startTenantFlow(publishingDomain);
-            Object[] metadataArray = AuthnDataPublisherUtils.getMetaDataArray(publishingDomain);
-
             org.wso2.carbon.databridge.commons.Event event = new org.wso2.carbon.databridge.commons
-                    .Event(streamName, System.currentTimeMillis(), metadataArray, null, payloadData);
+                    .Event(streamName, System.currentTimeMillis(), new Object[0], null, payloadData);
             CustomEventPublisherDataHolder.getInstance().getPublisherService().publish(event);
 
             if (LOG.isDebugEnabled()) {

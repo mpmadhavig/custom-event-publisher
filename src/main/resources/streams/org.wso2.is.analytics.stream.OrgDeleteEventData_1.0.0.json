@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "nickName": "",
   "description": "Stream for organization delete events",
-  "metaData": [
-    {
-      "name": "orgTenantId", "type": "INT"
-    }
-  ],
   "payloadData": [
     {
       "name": "apiKey",
@@ -20,6 +15,10 @@
     {
       "name": "organizationId",
       "type": "STRING"
+    },
+    {
+      "name": "timestamp",
+      "type": "LONG"
     }
   ]
 }

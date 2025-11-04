@@ -113,7 +113,7 @@ public class OrgEventPublisher extends BaseEventPublisher {
 
     private static Object[] createOrgEventPayload(OrgEventData orgEventData) {
 
-        Object[] payloadData = new Object[12];
+        Object[] payloadData = new Object[13];
 
         payloadData[0] = "org_event_sample_key";
         payloadData[1] = orgEventData.getEventType();
@@ -127,24 +127,27 @@ public class OrgEventPublisher extends BaseEventPublisher {
         payloadData[9] = orgEventData.getCreatorEmail();
         payloadData[10] = orgEventData.getParentOrgId();
         payloadData[11] = orgEventData.getOrganizationHandle();
+        payloadData[12] = System.currentTimeMillis();
 
         return payloadData;
     }
 
     private static Object[] createOrgDeleteEventPayload(String eventType, String organizationId) {
 
-        Object[] payloadData = new Object[3];
+        Object[] payloadData = new Object[4];
 
         payloadData[0] = "org_delete_event_sample_key";
         payloadData[1] = eventType;
         payloadData[2] = organizationId;
+        payloadData[3] = System.currentTimeMillis();
 
         return payloadData;
     }
 
     private static Object[] createOrgPatchEventPayload(OrgPatchEventData orgPatchEventData) {
 
-        Object[] payloadData = new Object[4];
+        Object[] payloadData = new Object[5];
+
         payloadData[0] = "org_patch_event_sample_key";
         payloadData[1] = orgPatchEventData.getEventType();
         payloadData[2] = orgPatchEventData.getOrganizationId();
@@ -162,6 +165,7 @@ public class OrgEventPublisher extends BaseEventPublisher {
         } else {
             payloadData[3] = null;
         }
+        payloadData[4] = System.currentTimeMillis();
 
         return payloadData;
     }
