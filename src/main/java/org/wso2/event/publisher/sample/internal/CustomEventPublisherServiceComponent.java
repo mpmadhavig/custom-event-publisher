@@ -30,6 +30,7 @@ import org.wso2.carbon.event.stream.core.EventStreamService;
 import org.wso2.carbon.identity.event.handler.AbstractEventHandler;
 import org.wso2.carbon.user.core.service.RealmService;
 import org.wso2.event.publisher.sample.publishers.GroupEventPublisher;
+import org.wso2.event.publisher.sample.publishers.OrgEventPublisher;
 import org.wso2.event.publisher.sample.publishers.RoleEventPublisher;
 import org.wso2.event.publisher.sample.publishers.UserEventPublisher;
 
@@ -56,6 +57,8 @@ public class CustomEventPublisherServiceComponent {
                     new RoleEventPublisher(), null);
             context.getBundleContext().registerService(AbstractEventHandler.class.getName(),
                     new GroupEventPublisher(), null);
+            context.getBundleContext().registerService(AbstractEventHandler.class.getName(),
+                    new OrgEventPublisher(), null);
             if (log.isDebugEnabled()) {
                 log.debug("SampleEventPublisherServiceComponent is activated");
             }

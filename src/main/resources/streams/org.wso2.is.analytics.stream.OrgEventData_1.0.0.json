@@ -5,8 +5,7 @@
   "description": "",
   "metaData": [
     {
-      "name": "orgTenantId",
-      "type": "INT"
+      "name": "tenantId", "type": "INT"
     }
   ],
   "payloadData": [
@@ -19,15 +18,43 @@
       "type": "STRING"
     },
     {
-      "name": "orgName",
-      "type": "STRING"
-    },
-    {
       "name": "orgId",
       "type": "STRING"
     },
     {
-      "name": "orgHandle",
+      "name": "orgName",
+      "type": "STRING"
+    },
+    {
+      "name": "version",
+      "type": "STRING"
+    },
+    {
+      "name": "description",
+      "type": "STRING"
+    },
+    {
+      "name": "status",
+      "type": "STRING"
+    },
+    {
+      "name": "creatorId",
+      "type": "STRING"
+    },
+    {
+      "name": "creatorUsername",
+      "type": "STRING"
+    },
+    {
+      "name": "creatorEmail",
+      "type": "STRING"
+    },
+    {
+      "name": "parentOrgId",
+      "type": "STRING"
+    },
+    {
+      "name": "organizationHandle",
       "type": "STRING"
     }
   ]

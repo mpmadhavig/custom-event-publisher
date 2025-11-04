@@ -1,0 +1,30 @@
+{
+  "name": "org.wso2.is.analytics.stream.OrgPatchEventData",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "Stream for organization patch events",
+  "metaData": [
+    {
+      "name": "orgTenantId", "type": "INT"
+    }
+  ],
+  "payloadData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+      "name": "organizationId",
+      "type": "STRING"
+    },
+    {
+      "name": "patchOperations",
+      "type": "STRING"
+    }
+  ]
+}
+
