@@ -1,0 +1,40 @@
+{
+  "name": "org.wso2.is.analytics.stream.OrgGroupEventData",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "apiKey",
+      "type": "STRING"
+    },
+    {
+      "name": "eventType",
+      "type": "STRING"
+    },
+    {
+      "name": "groupName",
+      "type": "STRING"
+    },
+    {
+      "name": "groupID",
+      "type": "STRING"
+    },
+    {
+      "name": "orgName",
+      "type": "STRING"
+    },
+    {
+      "name": "userStoreDomain",
+      "type": "STRING"
+    },
+    {
+      "name": "userList",
+      "type": "STRING"
+    },
+    {
+      "name": "timestamp",
+      "type": "LONG"
+    }
+  ]
+}
