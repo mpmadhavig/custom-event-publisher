@@ -45,7 +45,6 @@ public class GroupEventPublisher extends BaseEventPublisher {
 
     private static final Set<String> GROUP_UPDATE_EVENTS = new HashSet<String>() {{
         add(POST_UPDATE_ROLE);
-        add(POST_UPDATE_ROLE_NAME_EVENT);
         add(POST_UPDATE_USER_LIST_OF_ROLE_EVENT);
         add(POST_UPDATE_USER_LIST_OF_ROLE);
     }};
